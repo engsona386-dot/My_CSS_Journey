@@ -1,70 +1,55 @@
-/* 1. إعدادات الصفحة العامة */
+/* إعدادات الصندوق العامة - Box Sizing */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; [span_1](start_span)/*[span_1](end_span) */
 }
 
 body {
-    /* التأكد من أن الخلفية هي الصورة وليست لوناً أبيض */
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #000; /* لون احتياطي أسود في حال لم تحمل الصورة */
+    /* رابط جديد ومباشر لصورة الأرض */
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #000; /* لو الصورة منزلتش يظهر أسود مش أبيض */
     
-    font-family: 'Roboto', sans-serif;
-    color: white;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* 2. العنوان الثابت (Sticky) */
 header {
-    position: sticky;
-    top: 10px;
+    position: sticky; [span_2](start_span)/*فن التموضع -س[span_2](end_span) */
+    top: 20px;
     z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 h1.floating-title {
-    font-family: 'Orbitron', sans-serif;
-    background: rgba(0, 0, 0, 0.8); /* خلفية سوداء شفافة جداً للعنوان */
+    font-family: 'Orbitron', sans-serif; [span_3](start_span)/* نقوش الحكماء - ع[span_3](end_span) */
     color: #00d4ff;
-    border: 2px solid #00d4ff;
+    border: 3px solid #00d4ff; [span_4](start_span)/*دروع الحماية -ث[span_4](end_span) */
+    background: rgba(0, 0, 0, 0.8);
     padding: 15px 30px;
     border-radius: 50px;
-    text-shadow: 0 0 10px #00d4ff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    text-shadow: 0 0 15px #00d4ff;
 }
 
-/* 3. البطاقات (Cards) والشفافية */
 .container {
-    width: 100%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 40px;
 }
 
 .card {
-    /* السر هنا: استخدام rgba بـ 0.7 لجعلها شفافة ترى ما خلفها */
-    background: rgba(20, 20, 20, 0.7); 
-    padding: 30px;
-    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.1); /* شفافية عالية عشان تشوفي الصورة اللي وراها */
+    backdrop-filter: blur(10px); /* بيخلي اللي ورا البطاقة مغبش وشكله شيك */
+    padding: 30px; [span_5](start_span)/*قانون الأبعاد -س[span_5](end_span) */
+    margin-bottom: 20px;
     border-radius: 20px;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-    backdrop-filter: blur(5px); /* لمسة سحرية تجعل الخلفية خلف البطاقة ضبابية */
-}
-
-h2 {
-    color: #00d4ff;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-}
-
-p {
-    line-height: 1.6;
-    font-size: 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
 }
