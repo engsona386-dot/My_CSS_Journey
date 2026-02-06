@@ -1,20 +1,39 @@
 body {
-    /* وضع صورة خلفية بدلاً من اللون */
-    background-image: url('https://images.unsplash.com/photo-1464802686167-b939a67e06a1?w=1000');
+    /* 1. إضافة صورة خلفية (رابط سريع ومباشر) */
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
     
-    /* منع تكرار الصورة */
+    /* 2. منع تكرار الصورة */
     background-repeat: no-repeat;
     
-    /* جعل الصورة تغطي الشاشة بالكامل */
+    /* 3. جعل الصورة تغطي الشاشة بالكامل (Size) */
     background-size: cover;
     
-    /* تثبيت الخلفية عند التمرير */
+    /* 4. تثبيت الخلفية عند التمرير */
     background-attachment: fixed;
-
-    /* تنسيق النص ليظهر بوضوح بالإنجليزية */
+    
+    /* تنسيق النصوص */
     color: white;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 15%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+.container {
+    background: rgba(0, 0, 0, 0.6); /* طبقة شفافة لجعل الكلام أوضح */
+    padding: 30px;
+    border-radius: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.status span {
+    color: #00d4ff;
+    font-weight: bold;
+}
