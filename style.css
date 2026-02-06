@@ -1,10 +1,21 @@
-body {
-    background-image: url('https://images.unsplash.com/photo-1464802686167-b939a67e06a1?w=1000');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    font-family: sans-serif;
-    margin-top: 15%;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mastery Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>The Codex of CSS Mastery</h1>
+    <p>Task 01: The First Spell - Reality Shaping Initiated!</p>
+    <p>Status: Black background and white text achieved.</p>
+    
+    <hr style="width: 50%; margin: 20px auto;">
+
+    <h2>Task 02: Trail of Portraits</h2>
+    <p>Status: Background Alchemy Unlocked!</p>
+
+</body>
+</html>
