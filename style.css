@@ -1,61 +1,60 @@
-herebody {
-    /* الخلفية */
+/* ضبط إعدادات الصندوق العامة */
+* {
+    box-sizing: border-box; [span_1](start_span)/*لضمان اننا حسبنا الأبعاد بدقة[span_1](end_span) */
+}
+
+body {
+    [span_2](start_span)/* الخلفية كاملة[span_2](end_span) */
     background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     
-    /*  الخطوط العامة */
+    [span_3](start_span)/*  الخطوط[span_3](end_span) */
     font-family: 'Roboto', sans-serif;
     color: white;
     
-    /* التوسيط */
+    /* التموضع في منتصف الشاشة */
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
 .container {
-    /*  الطبقة الشفافة والحواف */
-    background: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); /* لمسة ظل احترافية */
+    [span_4](start_span)/* الاختبار الخامس: قانون الأبعاد (Box Model)[span_4](end_span) */
+    background: rgba(0, 0, 0, 0.75); /* خلفية داكنة شفافة */
+    padding: 50px;           /* مسافة داخلية (Padding) */
+    margin: 20px;            /* مسافة خارجية (Margin) */
+    border-radius: 30px;     [span_5](start_span)/* حواف دائرية للبطاقة[span_5](end_span) */
+    max-width: 600px;        /* تحديد العرض لتظهر كبطاقة */
+    border: 1px solid rgba(0, 212, 255, 0.3); /* إطار خفيف جداً */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); /* ظل لإعطاء عمق */
 }
 
 h1 {
-    /*  خط العنوان المميز */
+    [span_6](start_span)/* الخط والإطار[span_6](end_span) */
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.8rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 0 0 15px #00d4ff; /* وهج النص */
     
-    /*  الإطار والحواف */
-    border: 3px solid #00d4ff;
-    padding: 15px 30px;
-    border-radius: 15px;
+    border: 3px solid #00d4ff;    /* إطار العنوان */
+    padding: 20px;                /* مسافة داخل الإطار */
+    border-radius: 15px;          /* حواف الإطار الدائرية */
+    margin-bottom: 30px;          /* مسافة تحت العنوان */
     display: inline-block;
-    
-    /*  ظل النص (Text Shadow) */
-    text-shadow: 0 0 10px #00d4ff;
 }
 
-.mission-title {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-.mission-title span {
+.mission-status span {
     color: #00d4ff;
     font-weight: bold;
-    text-decoration: underline; /*  تزيين النص */
+    text-decoration: underline; [span_7](start_span)/* تزيين النص[span_7](end_span) */
 }
 
-.task-info h2 {
-    color: #00d4ff;
+.content-box {
     margin-top: 20px;
+    line-height: 1.6; /* تحسين المسافات بين الأسطر */
 }
