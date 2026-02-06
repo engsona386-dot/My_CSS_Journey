@@ -1,39 +1,7 @@
-body {
-    /* 1. إضافة صورة خلفية (رابط سريع ومباشر) */
-    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
-    
-    /* 2. منع تكرار الصورة */
-    background-repeat: no-repeat;
-    
-    /* 3. جعل الصورة تغطي الشاشة بالكامل (Size) */
-    background-size: cover;
-    
-    /* 4. تثبيت الخلفية عند التمرير */
-    background-attachment: fixed;
-    
-    /* تنسيق النصوص */
-    color: white;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background: rgba(0, 0, 0, 0.6); /* طبقة شفافة لجعل الكلام أوضح */
-    padding: 30px;
-    border-radius: 15px;
-}
-
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.status span {
-    color: #00d4ff;
-    font-weight: bold;
+    border: 3px solid #00d4ff;   /* رسم إطار بلون لبني سحري */
+    padding: 15px 30px;          /* مسافة بين الكلام والإطار */
+    display: inline-block;       /* جعل الإطار يحيط بالكلمة فقط */
+    border-radius: 15px;         /* جعل الحواف دائرية (مش حادة) */
+    background: rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف خلف العنوان */
 }
