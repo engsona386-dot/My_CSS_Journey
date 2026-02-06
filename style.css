@@ -1,7 +1,28 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white; /* يخلي الكلام الباقي أبيض عشان يبقى واضح ع الخلفية */
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5); /* خلفية سوداء شفافة للبطاقة كلها */
+    padding: 40px;
+    border-radius: 20px;
+}
+
 h1 {
-    border: 3px solid #00d4ff;   /* رسم إطار بلون لبني سحري */
-    padding: 15px 30px;          /* مسافة بين الكلام والإطار */
-    display: inline-block;       /* جعل الإطار يحيط بالكلمة فقط */
-    border-radius: 15px;         /* جعل الحواف دائرية (مش حادة) */
-    background: rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف خلف العنوان */
+    border: 4px solid #00d4ff; /* الإطار اللبني بتاع الاختبار التالت */
+    border-radius: 15px;      /* الحواف الدائرية */
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1); /* لمعة خفيفة جوه البرواز */
+    color: white;
 }
