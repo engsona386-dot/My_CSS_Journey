@@ -1,66 +1,70 @@
-[span_1](start_span)/* إعدادات الصندوق العامة[span_1](end_span) */
+/* 1. إعدادات الصفحة العامة */
 * {
     box-sizing: border-box;
 }
 
 body {
-    [span_2](start_span)/* الخلفية والتحكم في الحجم [span_2](end_span) */
+    /* التأكد من أن الخلفية هي الصورة وليست لوناً أبيض */
     background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #000; /* لون احتياطي أسود في حال لم تحمل الصورة */
     
-    [span_3](start_span)/*الخطوط [span_3](end_span) */
     font-family: 'Roboto', sans-serif;
     color: white;
-    
     margin: 0;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    text-align: center;
 }
 
-.container {
-    [span_4](start_span)/* الأبعاد والمسافات [span_4](end_span) */
-    background: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    margin: 20px;
-    border-radius: 30px;
-    max-width: 500px;
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    
-    /* للسماح للعنوان بالتحرك داخله */
-    height: 400px; 
-    overflow-y: auto; /* إضافة شريط تمرير لتجربة الـ Sticky */
+/* 2. العنوان الثابت (Sticky) */
+header {
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 h1.floating-title {
-    [span_5](start_span)/* التموضع [span_5](end_span) */
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(0, 0, 0, 0.8); /* خلفية بسيطة لتظهر بوضوح أثناء التمرير */
-
-    [span_6](start_span)/* التصميم والخطوط [span_6](end_span) */
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
+    background: rgba(0, 0, 0, 0.8); /* خلفية سوداء شفافة جداً للعنوان */
     color: #00d4ff;
     border: 2px solid #00d4ff;
-    padding: 15px;
-    border-radius: 15px;
+    padding: 15px 30px;
+    border-radius: 50px;
     text-shadow: 0 0 10px #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+/* 3. البطاقات (Cards) والشفافية */
+.container {
     width: 100%;
+    max-width: 700px;
 }
 
-.mission-status span {
+.card {
+    /* السر هنا: استخدام rgba بـ 0.7 لجعلها شفافة ترى ما خلفها */
+    background: rgba(20, 20, 20, 0.7); 
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(5px); /* لمسة سحرية تجعل الخلفية خلف البطاقة ضبابية */
+}
+
+h2 {
     color: #00d4ff;
-    font-weight: bold;
-    text-decoration: underline;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
 }
 
-.content-box h2 {
-    margin-top: 30px;
-    color: #fff;
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
