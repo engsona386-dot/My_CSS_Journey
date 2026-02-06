@@ -1,77 +1,70 @@
-/* 1. إعدادات الصفحة الشاملة (Box Sizing) */
+here/* 1. إعدادات الصفحة العامة */
 * {
-    [span_2](start_span)box-sizing: border-box;[span_2](end_span)
+    box-sizing: border-box;
 }
 
 body {
-    /* خيمياء الخلفيات - ي */
-    [span_3](start_span)background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');[span_3](end_span)
-    [span_4](start_span)background-size: cover;[span_4](end_span)
-    [span_5](start_span)background-attachment: fixed;[span_5](end_span)
-    background-color: #000; 
+    /* التأكد من أن الخلفية هي الصورة وليست لوناً أبيض */
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000; /* لون احتياطي أسود في حال لم تحمل الصورة */
     
-    /*نقوش الحكماء-ع */
-    [span_6](start_span)font-family: 'Roboto', sans-serif;[span_6](end_span)
-    [span_7](start_span)color: white;[span_7](end_span)
+    font-family: 'Roboto', sans-serif;
+    color: white;
     margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
 }
 
-/* 2. فن التموضع (Sticky Header) -  */
+/* 2. العنوان الثابت (Sticky) */
 header {
-    [span_8](start_span)position: sticky;[span_8](end_span)
+    position: sticky;
     top: 10px;
     z-index: 1000;
-    margin-bottom: 40px;
-}
-
-h1 {
-    [span_9](start_span)font-family: 'Orbitron', sans-serif;[span_9](end_span)
-    color: #00d4ff;
-    [span_10](start_span)border: 3px solid #00d4ff;[span_10](end_span)
-    background: rgba(0, 0, 0, 0.8);
-    [span_11](start_span)padding: 15px 30px;[span_11](end_span)
-    [span_12](start_span)border-radius: 50px;[span_12](end_span)
-    [span_13](start_span)text-shadow: 0 0 15px #00d4ff;[span_13](end_span)
-}
-
-/* 3. قانون الأبعاد والبطاقات (The Card Artifact)_ */
-.card {
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(10px); /* تأثير زجاجي حديث */
-    [span_14](start_span)padding: 30px;[span_14](end_span)
-    [span_15](start_span)margin-bottom: 25px;[span_15](end_span)
-    [span_16](start_span)border-radius: 20px;[span_16](end_span)
-    border: 1px solid rgba(0, 212, 255, 0.3);
     width: 100%;
-    max-width: 600px;
-    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* حركة تفاعلية عند المرور بالماوس */
+h1.floating-title {
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(0, 0, 0, 0.8); /* خلفية سوداء شفافة جداً للعنوان */
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-shadow: 0 0 10px #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+/* 3. البطاقات (Cards) والشفافية */
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.card {
+    /* السر هنا: استخدام rgba بـ 0.7 لجعلها شفافة ترى ما خلفها */
+    background: rgba(20, 20, 20, 0.7); 
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(5px); /* لمسة سحرية تجعل الخلفية خلف البطاقة ضبابية */
 }
 
 h2 {
     color: #00d4ff;
-    [span_17](start_span)font-family: 'Orbitron', sans-serif;[span_17](end_span)
-    margin-top: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
+p {
+    line-height: 1.6;
     font-size: 1.1rem;
-}
-
-li::before {
-    content: "✦ ";
-    color: #00d4ff;
 }
