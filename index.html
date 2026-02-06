@@ -1,21 +1,71 @@
-<!DOCTYPE html>
+here<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE GRAND PROJECT - CSS MASTERY</title>
+    <title>THE GRAND PROJECT - FINAL FORM</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* كود التنسيق مدمج هنا لضمان عمل الألوان */
+        * { box-sizing: border-box; }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000');
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #000;
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+        }
+
+        header {
+            position: sticky;
+            top: 10px;
+            z-index: 1000;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00d4ff;
+            border: 3px solid #00d4ff;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-shadow: 0 0 15px #00d4ff;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 { color: #00d4ff; border-bottom: 1px solid #00d4ff; padding-bottom: 10px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        li::before { content: "✦ "; color: #00d4ff; }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1 class="floating-title">THE CODEX OF SEIF</h1>
+        <h1>THE CODEX OF SEIF</h1>
     </header>
 
-    <main class="container">
-        
+    <main>
         <section class="card">
             <h2>The Explorer</h2>
             <p>Welcome to my digital realm. I am a CSS Alchemist in training, transforming raw code into visual gold.</p>
@@ -23,7 +73,7 @@
 
         <section class="card">
             <h2>Arcane Skills</h2>
-            <ul class="skills-list">
+            <ul>
                 <li><b>Background Alchemy:</b> Mastering images and scales.</li>
                 <li><b>Box Model Mastery:</b> Precision in Padding and Margins.</li>
                 <li><b>The Floating Eye:</b> Advanced Layout and Positioning.</li>
@@ -32,11 +82,8 @@
 
         <section class="card">
             <h2>Artifact Gallery</h2>
-            <div class="gallery">
-                <p>Images and artifacts are being summoned to this gallery soon...</p>
-            </div>
+            <p>Visual artifacts from my CSS journey will appear here soon...</p>
         </section>
-
     </main>
 
 </body>
